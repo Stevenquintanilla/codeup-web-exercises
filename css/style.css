@@ -1,4 +1,53 @@
 h1 {
-    color: purple;
+    align: middle;
+    color: #676e63;
     text-decoration: underline;
+}
+
+h2 {
+    color: #676e63
+}
+
+body {
+    font-family: 'Rokkitt', serif;
+    font-size: large;
+    background-image: url("../img/bg.png")
+}
+
+ul {
+    list-style: square;
+}
+
+ol {
+    list-style: upper-latin;
+}
+
+table {
+    border: solid black 2px;
+}
+
+td, tr {
+    border: solid black 1px;
+    padding: 1em;
+    font-size: large;
+}
+
+a:link {
+    color: beige;
+}
+
+a:visited {
+    color: darkred;
+}
+
+a:hover {
+    color: #a98c67;
+}
+
+a:active {
+    color: cadetblue;
+}
+
+.bg-color {
+    background-color: #676e63;
 }
