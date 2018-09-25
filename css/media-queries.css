@@ -74,7 +74,7 @@ body {
 
     .nav-links li {
         padding: 1em 0;
-        width: 91%;
+        width: 90%;
         background: rgb(204	204	204);
         text-align: center;
         margin: 10px;
@@ -97,11 +97,6 @@ body {
     .header-img {
         align: center;
         margin: 0 auto;
-    }
-
-    section {
-        margin-top: 0px;
-        font-size: x-large;
     }
 
 }
