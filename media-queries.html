@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Media Queries</title>
+    <link rel="stylesheet" href="css/grid-layout.css">
     <link rel="stylesheet" href="css/media-queries.css">
 </head>
 <body>
+<div class="container">
     <div class="alert-info hidden-on-desktop">
         <a href="#main">Skip to main content</a>
     </div>
@@ -20,21 +22,26 @@
         </ul>
     </nav>
     <div class="header-img">
-        <img src="http://placeholder.pics/svg/890x385" alt="Placeholder image">
+        <div class="row"></div>
+        <img class="full" src="http://placeholder.pics/svg/890x385" alt="Placeholder image">
     </div>
-    <section id="main" class="main">
+    </div>
+    <div class="row">
+    <section id="main" class="main column one-third">
         <h2>Main Section</h2>
         <p>Amet lorem accusantium maxime quis iusto. Sit aliquid quidem at animi commodi, iusto harum, non. Accusantium sequi consectetur deleniti soluta tempora. Maxime maiores blanditiis veritatis vitae amet maiores sapiente in?</p>
     </section>
-    <section class="sub-section">
+    <section class="sub-section colimn one-third">
         <h2>Sub-section</h2>
         <p>Amet optio quidem voluptatum neque esse at saepe, reiciendis quaerat architecto unde minima aspernatur harum cum totam non amet soluta. Ea quae odio harum magni ab vitae tenetur. Itaque numquam!</p>
     </section>
+    </div>
     <footer>
         <p>(c) 2017 All rights reserved</p>
         <div id="social-media-links">
 
         </div>
     </footer>
+</div>
 </body>
 </html>

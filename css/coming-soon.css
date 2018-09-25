@@ -1,0 +1,52 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    color: white;
+}
+    body {
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+
+    }
+
+    header {
+        margin-left: 20px;
+    }
+    footer {
+        text-align: left;
+
+    }
+
+    .container {
+        background: url("../img/space.jpg");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        background-repeat: no-repeat;
+        position:absolute;
+        width:100%;
+        height:100%;
+        overflow: scroll;
+    }
+
+    /*.logo {*/
+    /*padding: 1em;*/
+    /*margin: 0;*/
+    /*}*/
+    .content-centered {
+        position: relative;
+        top: 200px;
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+
+    }
+
+    .line {
+        text-decoration-line: line-through;
+        text-underline-color: white;
+    }
+

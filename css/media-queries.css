@@ -3,7 +3,6 @@ html,
 body {
     margin: 0;
     height: 100%;
-    width: 100%;
     box-sizing: border-box;
     font-family: sans-serif;
 }
@@ -12,9 +11,9 @@ body {
     padding: 5px;
 }
 
-.header-img>img {
-    width: 100%;
-}
+/*.header-img>img {*/
+    /*width: 100%;*/
+/*}*/
 
 .sub-section {
     font-style: italic;
@@ -43,13 +42,12 @@ body {
         line-height: 2em;
     }
 
-    .main {
-        float: left;
-        width: 30%;
-    }
+    /*.main {*/
+        /*float: left;*/
+        /*width: 30%;*/
+    /*}*/
 
     .sub-section {
-        width: 30%;
         float: right;
     }
 
@@ -71,13 +69,15 @@ body {
         text-align: center;
 
     }
+    .nav-links {
+        padding: 0px;
+    }
 
     .nav-links li {
         padding: 1em 0;
-        width: 90%;
         background: rgb(204	204	204);
         text-align: center;
-        margin: 10px;
+        margin: 10px 0px;
         list-style: none;
     }
 
@@ -85,7 +85,6 @@ body {
         background: rgb(201	255	255);
         border: solid lightgray 2px;
         text-align: center;
-        width: 97%;
         padding: 1em;
     }
 
