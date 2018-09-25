@@ -1,0 +1,102 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+.fb-header {
+	background-color: #3f5c9a;
+	height: 82px; 
+	width: 100%;
+	border-bottom: solid #133783 1px;
+	margin: 0 auto;
+}
+
+.logo {
+	width: 50%;
+	float: left;
+}
+
+.fb-login {
+	position: relative;
+	left: 111px;
+	bottom: 0px;
+	width: 50%;
+	float: left;
+	font-size: 12px;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.logo img {
+	position: relative;
+	top: 20px;
+	left: 121px;
+}
+
+.fb-login label {
+	color: #fff;
+}
+
+.email {
+	position: relative;
+	top: 20px;
+	float: left;
+}
+
+.email label {
+	position: relative;
+	bottom: 5px;
+	left: 2px;
+}
+
+.email input[type="text"] {
+	height: 22px;
+	width: 150px;
+	border: solid #1d2a5b 1px;
+}
+
+.password {
+	position: relative;
+	top: 20px;
+	left: -2px;
+	float: left;
+}
+
+.password input[type="password"] {
+	height: 22px;
+	width: 150px;
+	border: solid #1d2a5b 1px;
+	margin-left: 15px;
+}
+
+.password label {
+	position: relative;
+	bottom: 5px;
+	left: 17px;
+}
+
+.password a {
+	position: relative;
+	top: 5px;
+	left: 17px;
+	color: #9cb4d8;
+	text-decoration: none;
+}
+
+.login-button {
+	position: relative;
+	float: left;
+	width: 50px;
+	margin-left: 9px;
+	top: 34px;
+}
+
+.login-button button[type="submit"] {
+	font-family: Helvetica, Arial, sans-serif;
+	background-color: #4267b2;
+	border: solid #29487d 1px;
+	border-radius: 2px;
+	color: #fff;
+	height: 23px;
+	width: 48px;
+	font-weight: bold;
+}
