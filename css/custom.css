@@ -52,6 +52,7 @@ footer>button {
     border: 1px solid black;
 }
 
+
 @media screen and (max-width: 699px) {
     hidden-on-small {
         display: none;

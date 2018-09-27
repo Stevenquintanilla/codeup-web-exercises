@@ -32,7 +32,7 @@
                     </div>
                 </li>
                 <li>
-                <form class="form-inline my-2 my-lg-0">
+                <form method="POST" action="https://http-inspector.glitch.me/" class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Zip Code" aria-label="Search">
                     <button class="btn my-2 my-sm-0 text-secondary border-secondary hi" type="submit">Search stores near you!</button>
                 </form>
@@ -49,6 +49,8 @@
         <div class="jumbotron hidden-on-small">
             <h1 class="text-center">Welcome to Pizza world!</h1>
         </div>
+
+        <form method="POST" action="https://http-inspector.glitch.me/"> <!-- form start-->
 
         <!-- Nav card tabs -->
         <h2>Build your own pizza!</h2>
@@ -72,7 +74,7 @@
 
         <!-- Size and Crust card -->
 
-        <div class="tab-content"><!-- tab content must encompass -->
+        <div class="tab-content"><!-- tab content must encompass everything else below -->
 
 
         <div class="card tab-pane active" role="tabpanel" id="size">
@@ -104,10 +106,10 @@
                     <p class="card-text-margin">Thin enough for optimum crispy to crunchy ratio</p>
                     <ul class="list-group list-group-flush">
                     <label for="thin-medium-pizza">
-                        <li class="list-group-item"><input type="radio" id="thin-medium-pizza" name="thin-size" value="thin-medium-pizza"> Medium (12")</li>
+                        <li class="list-group-item"><input type="radio" id="thin-medium-pizza" name="pizza-size" value="thin-medium-pizza"> Medium (12")</li>
                     </label>
                     <label for="thin-large-pizza">
-                        <li class="list-group-item"><input type="radio" id="thin-large-pizza" name="thin-size" value="thin-large-pizza"> Large (14")</li>
+                        <li class="list-group-item"><input type="radio" id="thin-large-pizza" name="pizza-size" value="thin-large-pizza"> Large (14")</li>
                     </label>
                 </ul>
                 </div>
@@ -213,12 +215,13 @@
                 </ul>
             </div>
 
-        <footer class="bg-light text-right">
-            <a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Checkout</a>
+        <footer class="bg-light clearfix">
+            <button type="submit" class="btn btn-primary"><i class="fas fa-shopping-cart"></i>Checkout</button>
         </footer>
         </div>
     </div>
     </div>
+        </form>
 </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
