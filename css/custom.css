@@ -1,0 +1,59 @@
+.jumbotron {
+    margin-top: 20px;
+    background-image: url("../img/pizza.png");
+    margin-bottom: 20px;
+    /*width: 100%;*/
+    padding: 4rem 0rem;
+}
+
+h1 {
+    width: 100%;
+    opacity: 0.5;
+    padding: 5px;
+    background-size: cover;
+    background-color: white;
+    margin-left: 0;
+}
+
+h2 {
+    margin: 10px 0;
+}
+
+h5 {
+    background-color: rgb(0	127	246);
+    color: white;
+}
+
+
+ul {
+    list-style: none;
+}
+
+input[type="radio"]{
+    vertical-align: baseline;
+}
+
+footer {
+    padding: 1em;
+    border: 1px solid rgb(223 223 223);
+}
+
+footer>button {
+    float:right;
+    margin: 0 5px;
+}
+
+
+.card-text-margin {
+    margin: 10px;
+}
+
+.border-fix {
+    border: 1px solid black;
+}
+
+@media screen and (max-width: 699px) {
+    hidden-on-small {
+        display: none;
+    }
+}

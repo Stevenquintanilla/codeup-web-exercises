@@ -11,12 +11,21 @@ body {
     padding: 5px;
 }
 
+footer {
+    display: inline-block;
+}
+
 /*.header-img>img {*/
     /*width: 100%;*/
 /*}*/
 
 .sub-section {
     font-style: italic;
+}
+
+#social-media-links a>img {
+    float: left;
+    height: 25px;
 }
 
 
@@ -54,11 +63,6 @@ body {
     .hidden-on-desktop {
         display: none;
     }
-
-    footer {
-        clear: both;
-    }
-
 
 }
 
