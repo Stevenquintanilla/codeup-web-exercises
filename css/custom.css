@@ -54,7 +54,7 @@ footer>button {
 
 
 @media screen and (max-width: 699px) {
-    hidden-on-small {
+    .hidden-on-small {
         display: none;
     }
 }
