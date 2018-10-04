@@ -5,7 +5,14 @@
     <title>External JS</title>
 </head>
 <body>
-<script src="js/external.js">
+<script>
+
+    function applyDiscount(price, discountPercent) {
+        var convertedDiscount = price * discountPercent;
+        var totalPrice = price - convertedDiscount;
+        return totalPrice;
+    }
+    console.log(applyDiscount(100, 0.2));
 </script>
 </body>
 </html>
