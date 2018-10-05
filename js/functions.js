@@ -311,4 +311,198 @@ function degreeToRadians(input) {
 
 console.log(degreeToRadians(90));
 
-var number = (input % 2 === 0) ? "Number is even" : "Number is odd";
+function removeString(firstString, secondString) {
+    if (firstString.includes(secondString) === true) {
+        var secondStringRemoveFromFirst = firstString.replace(secondString, "");
+        return secondStringRemoveFromFirst
+    } else {
+        return firstString;
+    }
+}
+
+function ifLastCharIsA(string) {
+    var stringLastChar = string.slice(-1);
+    if (stringLastChar.toLowerCase() === "a") {
+        var removeA = string.substring(0, string.length -1);
+        return removeA
+    }
+}
+
+function hasNumber(myString) {
+    return /\d/.test(myString);
+}
+
+console.log(hasNumber("hello"));
+
+function makeJustinMessage(input) {
+    input = input.toLowerCase();
+    if (input === "justin") {
+        return "It's Justin!"
+    } else if (input.indexOf(" ") !== -1  || hasNumber(input) === true) {
+        return "input is not VALID"
+    } else {
+        return "It's not Justin"
+    }
+}
+
+function actionStreetLight(input){
+    input = input.toLowerCase();
+    if (input === "red") {
+        return "STOP"
+    } else if (input === "yellow") {
+        var userDecision = confirm("Do you have time to stop?");
+        if (userDecision === true) {
+            return "Make the stop"
+        } else {
+            return "SPEED THROUGH IT GOGOGOGO"
+        }
+    } else if (input === "green") {
+        return "Drive through safely"
+    }
+}
+
+function returnInput(input) {
+    if (input === "") {
+        return "no input provided"
+    } else {
+        return input
+    }
+}
+
+var firstUnit = prompt("Give the first unit of measurement"),
+    userValue = parseFloat(prompt("Give a value for the first unit")),
+    secondUnit = prompt("Give the second unit of measurement to convert to");
+
+function metricConversion(firstUnit, secondUnit, userValue) {
+    switch (firstUnit) {
+        case "kilo" :
+            switch (secondUnit) {
+                case "kilo" :
+                    return userValue;
+                    break;
+                case "hecto" :
+                    return userValue * 10;
+                    break;
+                case "deka" :
+                    return userValue * 100;
+                    break;
+                case "deci" :
+                    return userValue * 1000;
+                    break;
+                case "centi" :
+                    return userValue * 10000;
+                    break;
+                case "milli" :
+                    return userValue * 100000;
+                    break;
+            }
+        case "hecto" :
+            switch (secondUnit) {
+                case "kilo" :
+                    return userValue / 10;
+                    break;
+                case "hecto" :
+                    return userValue;
+                    break;
+                case "deka" :
+                    return userValue * 10;
+                    break;
+                case "deci" :
+                    return userValue * 100;
+                    break;
+                case "centi" :
+                    return userValue * 1000;
+                    break;
+                case "milli" :
+                    return userValue * 10000;
+                    break;
+            }
+        case "deka" :
+            switch (secondUnit) {
+                case "kilo" :
+                    return userValue / 100;
+                    break;
+                case "hecto" :
+                    return userValue / 10;
+                    break;
+                case "deka" :
+                    return userValue;
+                    break;
+                case "deci" :
+                    return userValue * 10;
+                    break;
+                case "centi" :
+                    return userValue * 100;
+                    break;
+                case "milli" :
+                    return userValue * 1000;
+                    break;
+            }
+        case "deci" :
+            switch (secondUnit) {
+                case "kilo" :
+                    return userValue / 1000;
+                    break;
+                case "hecto" :
+                    return userValue / 100;
+                    break;
+                case "deka" :
+                    return userValue / 10;
+                    break;
+                case "deci" :
+                    return userValue;
+                    break;
+                case "centi" :
+                    return userValue * 10;
+                    break;
+                case "milli" :
+                    return userValue * 100;
+                    break;
+            }
+        case "centi" :
+            switch (secondUnit) {
+                case "kilo" :
+                    return userValue / 10000;
+                    break;
+                case "hecto" :
+                    return userValue / 1000;
+                    break;
+                case "deka" :
+                    return userValue / 100;
+                    break;
+                case "deci" :
+                    return userValue / 10;
+                    break;
+                case "centi" :
+                    return userValue;
+                    break;
+                case "milli" :
+                    return userValue * 10;
+                    break;
+            }
+        case "milli" :
+            switch (secondUnit) {
+                case "kilo" :
+                    return userValue / 100000;
+                    break;
+                case "hecto" :
+                    return userValue / 10000;
+                    break;
+                case "deka" :
+                    return userValue / 1000;
+                    break;
+                case "deci" :
+                    return userValue / 100;
+                    break;
+                case "centi" :
+                    return userValue / 10;
+                    break;
+                case "milli" :
+                    return userValue;
+                    break;
+            }
+
+    }
+}
+
+console.log(metricConversion(firstUnit, secondUnit, userValue ));
