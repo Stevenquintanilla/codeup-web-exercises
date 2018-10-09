@@ -369,140 +369,147 @@ function returnInput(input) {
     }
 }
 
-var firstUnit = prompt("Give the first unit of measurement"),
-    userValue = parseFloat(prompt("Give a value for the first unit")),
-    secondUnit = prompt("Give the second unit of measurement to convert to");
-
-function metricConversion(firstUnit, secondUnit, userValue) {
-    switch (firstUnit) {
-        case "kilo" :
-            switch (secondUnit) {
-                case "kilo" :
-                    return userValue;
-                    break;
-                case "hecto" :
-                    return userValue * 10;
-                    break;
-                case "deka" :
-                    return userValue * 100;
-                    break;
-                case "deci" :
-                    return userValue * 1000;
-                    break;
-                case "centi" :
-                    return userValue * 10000;
-                    break;
-                case "milli" :
-                    return userValue * 100000;
-                    break;
-            }
-        case "hecto" :
-            switch (secondUnit) {
-                case "kilo" :
-                    return userValue / 10;
-                    break;
-                case "hecto" :
-                    return userValue;
-                    break;
-                case "deka" :
-                    return userValue * 10;
-                    break;
-                case "deci" :
-                    return userValue * 100;
-                    break;
-                case "centi" :
-                    return userValue * 1000;
-                    break;
-                case "milli" :
-                    return userValue * 10000;
-                    break;
-            }
-        case "deka" :
-            switch (secondUnit) {
-                case "kilo" :
-                    return userValue / 100;
-                    break;
-                case "hecto" :
-                    return userValue / 10;
-                    break;
-                case "deka" :
-                    return userValue;
-                    break;
-                case "deci" :
-                    return userValue * 10;
-                    break;
-                case "centi" :
-                    return userValue * 100;
-                    break;
-                case "milli" :
-                    return userValue * 1000;
-                    break;
-            }
-        case "deci" :
-            switch (secondUnit) {
-                case "kilo" :
-                    return userValue / 1000;
-                    break;
-                case "hecto" :
-                    return userValue / 100;
-                    break;
-                case "deka" :
-                    return userValue / 10;
-                    break;
-                case "deci" :
-                    return userValue;
-                    break;
-                case "centi" :
-                    return userValue * 10;
-                    break;
-                case "milli" :
-                    return userValue * 100;
-                    break;
-            }
-        case "centi" :
-            switch (secondUnit) {
-                case "kilo" :
-                    return userValue / 10000;
-                    break;
-                case "hecto" :
-                    return userValue / 1000;
-                    break;
-                case "deka" :
-                    return userValue / 100;
-                    break;
-                case "deci" :
-                    return userValue / 10;
-                    break;
-                case "centi" :
-                    return userValue;
-                    break;
-                case "milli" :
-                    return userValue * 10;
-                    break;
-            }
-        case "milli" :
-            switch (secondUnit) {
-                case "kilo" :
-                    return userValue / 100000;
-                    break;
-                case "hecto" :
-                    return userValue / 10000;
-                    break;
-                case "deka" :
-                    return userValue / 1000;
-                    break;
-                case "deci" :
-                    return userValue / 100;
-                    break;
-                case "centi" :
-                    return userValue / 10;
-                    break;
-                case "milli" :
-                    return userValue;
-                    break;
-            }
-
+for (var i = 0; i <= 10; ++i) {
+    console.log('Badgers, badgers, badgers');
+    for (var j=0; j <= 1; ++j) {
+        console.log('Mushrooms');
     }
 }
 
-console.log(metricConversion(firstUnit, secondUnit, userValue ));
+// var firstUnit = prompt("Give the first unit of measurement"),
+//     userValue = parseFloat(prompt("Give a value for the first unit")),
+//     secondUnit = prompt("Give the second unit of measurement to convert to");
+//
+// function metricConversion(firstUnit, secondUnit, userValue) {
+//     switch (firstUnit) {
+//         case "kilo" :
+//             switch (secondUnit) {
+//                 case "kilo" :
+//                     return userValue;
+//                     break;
+//                 case "hecto" :
+//                     return userValue * 10;
+//                     break;
+//                 case "deka" :
+//                     return userValue * 100;
+//                     break;
+//                 case "deci" :
+//                     return userValue * 1000;
+//                     break;
+//                 case "centi" :
+//                     return userValue * 10000;
+//                     break;
+//                 case "milli" :
+//                     return userValue * 100000;
+//                     break;
+//             }
+//         case "hecto" :
+//             switch (secondUnit) {
+//                 case "kilo" :
+//                     return userValue / 10;
+//                     break;
+//                 case "hecto" :
+//                     return userValue;
+//                     break;
+//                 case "deka" :
+//                     return userValue * 10;
+//                     break;
+//                 case "deci" :
+//                     return userValue * 100;
+//                     break;
+//                 case "centi" :
+//                     return userValue * 1000;
+//                     break;
+//                 case "milli" :
+//                     return userValue * 10000;
+//                     break;
+//             }
+//         case "deka" :
+//             switch (secondUnit) {
+//                 case "kilo" :
+//                     return userValue / 100;
+//                     break;
+//                 case "hecto" :
+//                     return userValue / 10;
+//                     break;
+//                 case "deka" :
+//                     return userValue;
+//                     break;
+//                 case "deci" :
+//                     return userValue * 10;
+//                     break;
+//                 case "centi" :
+//                     return userValue * 100;
+//                     break;
+//                 case "milli" :
+//                     return userValue * 1000;
+//                     break;
+//             }
+//         case "deci" :
+//             switch (secondUnit) {
+//                 case "kilo" :
+//                     return userValue / 1000;
+//                     break;
+//                 case "hecto" :
+//                     return userValue / 100;
+//                     break;
+//                 case "deka" :
+//                     return userValue / 10;
+//                     break;
+//                 case "deci" :
+//                     return userValue;
+//                     break;
+//                 case "centi" :
+//                     return userValue * 10;
+//                     break;
+//                 case "milli" :
+//                     return userValue * 100;
+//                     break;
+//             }
+//         case "centi" :
+//             switch (secondUnit) {
+//                 case "kilo" :
+//                     return userValue / 10000;
+//                     break;
+//                 case "hecto" :
+//                     return userValue / 1000;
+//                     break;
+//                 case "deka" :
+//                     return userValue / 100;
+//                     break;
+//                 case "deci" :
+//                     return userValue / 10;
+//                     break;
+//                 case "centi" :
+//                     return userValue;
+//                     break;
+//                 case "milli" :
+//                     return userValue * 10;
+//                     break;
+//             }
+//         case "milli" :
+//             switch (secondUnit) {
+//                 case "kilo" :
+//                     return userValue / 100000;
+//                     break;
+//                 case "hecto" :
+//                     return userValue / 10000;
+//                     break;
+//                 case "deka" :
+//                     return userValue / 1000;
+//                     break;
+//                 case "deci" :
+//                     return userValue / 100;
+//                     break;
+//                 case "centi" :
+//                     return userValue / 10;
+//                     break;
+//                 case "milli" :
+//                     return userValue;
+//                     break;
+//             }
+//
+//     }
+// }
+//
+// console.log(metricConversion(firstUnit, secondUnit, userValue ));
