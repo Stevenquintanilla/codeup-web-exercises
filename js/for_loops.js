@@ -17,8 +17,8 @@ function isEven(input) {
 }
 
 function generateTenRandomNum() {
-    for (var i = 1; i <= 10; i += 1) {
-        var output = Math.floor(Math.random() * 200) + 20;
+    for (i = 1; i <= 10; i += 1) {
+        output = Math.floor(Math.random() * 200) + 20;
         console.log(isEven(output));
     }
 
@@ -82,9 +82,11 @@ function countVowels(input) {
 }
 
 function count9(input) {
-    var stringNine = '9',
+    var regNine = 9,
+        stringNine = '9',
         result = [];
-        input = input.toString().split();
+    input = input.toString().split('');
+    // input = input.split('');
     for (var i = 0; i < input.length; i ++){
         if (stringNine.indexOf(input[i]) !== -1) {
             result.push(input[i]);
@@ -92,5 +94,18 @@ function count9(input) {
     }
     console.log(result.length);
 }
+var output = 0;
+for (var i = 1; i <= 100; i++) {
 
-count9(999);
+    output += i;
+}
+// console.log(output);
+
+for (var i = 99; i > 0; i--) {
+    if (i === 1) {
+        console.log(i + " bottle of beer left")
+    } else if (i > 1) {
+        console.log(i + " bottles of beer on the wall!")
+    }
+}
+
