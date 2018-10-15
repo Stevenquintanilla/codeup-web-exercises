@@ -52,13 +52,15 @@
 
     function hebDiscount (shoppers){
             var discountOff = 0,
+                discountTotal = 0,
                 total = shoppers.amount;
         if (shoppers.amount > 200) {
                     discountOff = .12;
-                    total = shoppers.amount - (shoppers.amount * discountOff);
+                    discountTotal = shoppers.amount * discountOff;
+                    total = shoppers.amount - (discountTotal.toFixed(2));
         }
-            return shoppers.name + " has spent " + shoppers.amount + " with a discount of " +
-                discountOff + ". He now owes " + total;
+            return shoppers.name + " has spent $" + shoppers.amount.toFixed(2) + " with a discount of $" +
+                discountTotal.toFixed(2) + ". He now owes $" + total.toFixed(2);
     }
     shoppers.forEach(function(element) {
         console.log(hebDiscount(element));
@@ -161,16 +163,17 @@ var books = [
      *   `showBookInfo` function.
      */
 
-    function createBook(title, author) {
-        return {
-            title: title,
-            author : {
-                firstName : author.split(' ')[0],
-                lastName : author.split(' ')[1]
+    function createBook(title, firstName, lastName) {
+        var book = {
+            "title" : title,
+            "author" : {
+                "firstName" : firstName,
+                "lastName" : lastName
             }
         };
+        return book;
     }
-    // console.log("true hero", "Dan Danson");
+
     function createBookArray() {
         do {
             var userTitle= prompt("Give the book a title"),
@@ -178,18 +181,30 @@ var books = [
                 userLastName= prompt("Give the author's last name"),
                 bookStorage = [];
 
-            var book = createBook(userTitle, userFirstName, userLastName);
-            book.push(bookStorage[0]);
+            bookStorage.push(createBook(userTitle, userFirstName, userLastName));
 
 
            var userConfirm = confirm("Do you want to add an another book?");
 
-        } while(userConfirm === true);
+        } while(userConfirm);
 
-        return console.log(bookStorage);
+        return bookStorage;
     }
 
-    createBookArray();
+    function showBookInfo(book) {
+        return "Title: " + book.title + "\nAuthor: " + book.author.firstName +
+            " " + book.author.lastName;
+    }
+
+    books.forEach(function (element, index) {
+        console.log(showBookInfo(element));
+        console.log("Book #: " + (index + 1));
+    });
+
+    createBookArray().forEach(function(element, index) {
+        console.log(showBookInfo(element));
+        console.log("Book #: " + (index + 1));
+    });
 
 
 })();

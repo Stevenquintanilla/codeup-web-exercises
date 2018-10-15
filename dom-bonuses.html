@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM-bonuses</title>
+</head>
+<main>
+    <li>
+
+    </li>
+</main>
+
+<body>
+<script>
+    var numberOfItems = prompt('How many items do you want?');
+    var itemName, itemList = [],
+        itemUlList = document.getElementsByTagName('li');
+
+    for (var i = 0; i < numberOfItems.length; i++) {
+        itemName = prompt("Enter the item name:");
+        itemList.push(itemName);
+    }
+
+    itemList.forEach(function(element) {
+        itemUlList.innerHTML += '<ul>element</ul>';
+    });
+
+</script>
+</body>
+</html>
