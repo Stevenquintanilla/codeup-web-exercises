@@ -61,7 +61,6 @@ function getEmployeeCount(userSalesReport) {
 
 
 }
-    console.log(getEmployeeCount(salesReport));
 
 
 function getTotalNumberOfSales(userSalesReport) {
@@ -71,7 +70,6 @@ function getTotalNumberOfSales(userSalesReport) {
     });
     return totalSales;
 }
-console.log("total number of sales is " + getTotalNumberOfSales(salesReport));
 
 function getAverageNumberOfSales(userSalesReport) {
     var totalSales = getTotalNumberOfSales(userSalesReport);
@@ -80,7 +78,6 @@ function getAverageNumberOfSales(userSalesReport) {
 
 }
 
-console.log(getAverageNumberOfSales(salesReport));
 
 var dog = {
     breed : "Corgi",
@@ -97,10 +94,10 @@ var dog = {
         return "bark bark mutha******";
     },
     getOlder : function() {
-        return this.age += 1;
+        this.age += 1;
     },
     toFix: function() {
-        return this.sterilized = true;
+         this.sterilized = true;
     },
     takeVaccinate: function(nameOfVaccine, dateOfVaccine) {
         var anotherVaccine =  {
@@ -111,6 +108,90 @@ var dog = {
     }
 };
 
-dog.toFix();
-dog.takeVaccinate("Rabies", "5/12/2017");
-console.log(dog.shotRecords);
+
+var books = [
+    {
+        "title" : "The Stand",
+        "author": {
+            "firstName" : "Stephen",
+            "lastName" : "King"
+        },
+        "keywords" : "Horror",
+        "isAvailable" : true,
+        "dateAvailable" :  new Date(Date.now()),
+        "lend" : function() {
+            this.isAvailable = false;
+            this.dateAvailable = new Date(Date.now() + 12096e5);
+        },
+        "receive" : function() {
+            this.isAvailable = true;
+            this.dateAvailable = new Date(Date.now());
+        }
+    },
+    {
+        "title" : "The Great Gatsby",
+        "author": {
+            "firstName" : "F. Scott",
+            "lastName" : "Fitzgerald"
+        }
+    },
+    {
+        "title" : "Ulysses",
+        "author": {
+            "firstName" : "James",
+            "lastName" : "Joyce"
+        }
+    },
+    {
+        "title" : "To The Lighthouse",
+        "author": {
+            "firstName" : "Virginia",
+            "lastName" : "Woolf"
+        }
+    },
+    {
+        "title" : "War and Peace",
+        "author": {
+            "firstName" : "Leo",
+            "lastName" : "Tolstoy",
+        }
+    }
+];
+
+function createBook(title, firstName, lastName) {
+    var book = {
+        "title" : title,
+        "author" : {
+            "firstName" : firstName,
+            "lastName" : lastName
+        }
+    };
+    return book;
+}
+
+function createBookArray() {
+    var bookStorage = [];
+    do {
+        var userTitle= prompt("Give the book a title"),
+            userFirstName= prompt("Give the author's first name"),
+            userLastName= prompt("Give the author's last name");
+
+        bookStorage.push(createBook(userTitle, userFirstName, userLastName));
+
+
+        var userConfirm = confirm("Do you want to add an another book?");
+
+    } while(userConfirm);
+
+    return bookStorage;
+}
+
+
+function editBookArray(book) {
+    var userRemove = parseFloat(prompt('Give the index of the book you want to remove'));
+    var removeBook = bookStorage
+}
+
+var arrayTest = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+
+console.log(arrayTest.join(' '));

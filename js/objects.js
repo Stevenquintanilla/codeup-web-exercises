@@ -87,6 +87,17 @@ var books = [
         "author": {
             "firstName" : "Stephen",
             "lastName" : "King"
+        },
+        "keywords" : "Horror",
+        "isAvailable" : true,
+        "dateAvailable" :  new Date(Date.now()),
+        "lend" : function() {
+            this.isAvailable = false;
+            this.dateAvailable = new Date(Date.now() + 12096e5);
+        },
+        "receive" : function() {
+            this.isAvailable = true;
+            this.dateAvailable = new Date(Date.now());
         }
     },
     {

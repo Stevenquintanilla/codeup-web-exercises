@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        #map-canvas {
+            width: 770px;
+            height: 481px;
+        }
+    </style>
+</head>
+<body>
+<!-- div to hold map -->
+<div id="map-canvas"></div>
+
+<!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+<script src="https://maps.googleapis.com/maps/api/js?key=
+"></script>
+
+<!-- Script to show address on map -->
+<script type="text/javascript">
+    (function() {
+        "use strict";
+
+        // Set our map options
+        var mapOptions = {
+            // Set the zoom level
+            zoom: 19,
+
+            // This sets the center of the map at our location
+            center: {
+                lat:  29.426791,
+                lng: -98.489602
+            }
+        };
+
+        // Render the map
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+        // Set our address to geocode
+        var address = "306 Pearl Pkwy #110, San Antonio, TX 78215";
+
+        // Init geocoder object
+        var geocoder = new google.maps.Geocoder();
+
+        // Geocode our address
+        geocoder.geocode({ "address": address }, function(results, status) {
+
+            // Check for a successful result
+            if (status == google.maps.GeocoderStatus.OK) {
+
+                // Recenter the map over the address
+                map.setCenter(results[0].geometry.location);
+            } else {
+
+                // Show an error message with the status if our request fails
+                alert("Geocoding was not successful - STATUS: " + status);
+            }
+        });
+
+        // Create lat and long for our marker position
+        var bakeryLor = { lat: 29.4423, lng: -98.4800 };
+        var bohan = { lat: 29.4267, lng: -98.4904 };
+        var hardRock = { lat: 29.4252, lng: -98.4892 };
+
+        var threeRes = [
+            {
+                restaurant : "Bakery Lorraine",
+                coordinates : {
+                    lat: 29.4423,
+                    lng: -98.4800
+                }
+
+            },
+            {
+                restaurant : "Bohanans Prime Steaks and Seafood",
+                coordinates : {
+                    lat: 29.4267,
+                    lng: -98.4904
+                }
+            },
+            {
+                restaurant : "Hard Rock Cafe",
+                coordinates : {
+                    lat: 29.4252,
+                    lng: -98.4892
+                }
+            },
+
+
+        ];
+        // Add the marker to our existing map
+        threeRes.forEach(function(element) {
+
+            var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+            var icons = {
+                dining: {
+                    icon: iconBase + 'dining.png'
+                }
+
+            };
+
+
+            var marker = new google.maps.Marker({
+                position: element.coordinates,
+                map: map,
+                animation: google.maps.Animation.DROP
+                icon: icons.dining.icon,
+
+            });
+
+            //Bounce animation for fun
+            marker.addListener('click', toggleBounce);
+            function toggleBounce() {
+                if (marker.getAnimation() !== null) {
+                    marker.setAnimation(null);
+                } else {
+                    marker.setAnimation(google.maps.Animation.BOUNCE);
+                }
+            }
+
+
+            marker.addListener('click', function() {
+                infowindow.open(marker.get('map'), marker);
+            });
+
+
+
+        });
+
+        // Create a new infoWindow object with content
+        var infowindow = new google.maps.InfoWindow({
+            content: "Bakeshop set in a remodeled home, " +
+                "serving sandwiches & an array of cookies, tarts, muffins & more."
+        });
+
+    })();
+</script>
+</body>
