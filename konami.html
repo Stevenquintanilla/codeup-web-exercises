@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Code</title>
+    <link rel="stylesheet" href="css/konami.css">
+</head>
+<body id="main" class=>
+<div class=cable></div>
+<div class=controller>
+    <div class=centerBlue>
+        <div class=centerLeft></div>
+        <div class=centerRight></div>
+    </div>
+    <div class=centerStart>
+        <div class=SLeft></div>
+        <div class=SRight></div>
+    </div>
+    <div class=centerSelect>
+        <div class=SLeft></div>
+        <div class=SRight></div>
+    </div>
+
+    <div class=controllerLeft>
+        <div class=circle></div>
+        <div class=crossCenter>
+            <div id="ct" class='crossTop'></div>
+            <div id ='cb' class=crossBottom></div>
+            <div id="cl" class=crossLeft></div>
+            <div id="cr" class=crossRight></div>
+            <div class=crossCircle></div>
+        </div>
+    </div>
+    <div class=controllerRight>
+        <div class=backButton1Center>
+            <div class= cornerLeft1></div>
+            <div class= cornerRight1></div>
+        </div>
+        <div class=backButton2Center>
+            <div id="a" class= cornerLeft2></div>
+            <div id="b" class= cornerRight2></div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.js"></script>
+
+
+<script>
+    'use strict';
+
+    var cheatCodes = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+    var codePosition = 0;
+
+
+
+    $(document).keydown(function(e) {
+        for (var i = 0; i < cheatCodes.length; i++) {
+            if (e.originalEvent.keyCode === cheatCodes[i]) {
+                e.preventDefault();
+            }
+        }
+    });
+
+    $(document).keyup(function (e) {
+        if (e.originalEvent.keyCode === cheatCodes[codePosition]) {
+            codePosition++;
+                if (codePosition === cheatCodes.length) {
+                    $('#main').toggleClass('win');
+                }
+            } else {
+                console.log('incorrect');
+                codePosition = 0;
+            }
+        });
+
+    $(document).keyup(function(event) {
+        console.log(event.keyCode);
+    });
+
+    $(document).keydown(function(e) {
+        if (e.originalEvent.keyCode === 38) {
+            $('#ct').addClass('crossTopBox');
+        }
+    });
+
+    $(document).keyup(function(e) {
+        if (e.originalEvent.keyCode === 38) {
+            $('#ct').removeClass('crossTopBox');
+        }
+    });
+
+    $(document).keydown(function(e) {
+        if (e.originalEvent.keyCode === 37) {
+            $('#cl').addClass('crossLeftBox');
+        }
+    });
+
+    $(document).keyup(function(e) {
+        if (e.originalEvent.keyCode === 37) {
+            $('#cl').removeClass('crossLeftBox');
+        }
+    });
+
+    $(document).keydown(function(e) {
+        if (e.originalEvent.keyCode === 39) {
+            $('#cr').addClass('crossRightBox');
+        }
+    });
+
+    $(document).keyup(function(e) {
+        if (e.originalEvent.keyCode === 39) {
+            $('#cr').removeClass('crossRightBox');
+        }
+    });
+
+    $(document).keydown(function(e) {
+        if (e.originalEvent.keyCode === 40) {
+            $('#cb').addClass('crossBottomBox');
+        }
+    });
+
+    $(document).keyup(function(e) {
+        if (e.originalEvent.keyCode === 40) {
+            $('#cb').removeClass('crossBottomBox');
+        }
+    });
+
+    $(document).keydown(function(e) {
+        if (e.originalEvent.keyCode === 65) {
+            $('#a').addClass('cornerLeft2Box');
+        }
+    });
+
+    $(document).keyup(function(e) {
+        if (e.originalEvent.keyCode === 65) {
+            $('#a').removeClass('cornerLeft2Box');
+        }
+    });
+
+    $(document).keydown(function(e) {
+        if (e.originalEvent.keyCode === 66) {
+            $('#b').addClass('cornerRight2Box');
+        }
+    });
+
+    $(document).keyup(function(e) {
+        if (e.originalEvent.keyCode === 66) {
+            $('#b').removeClass('cornerRight2Box');
+        }
+    });
+</script>
+
+
+
+</body>
+</html>
