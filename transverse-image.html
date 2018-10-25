@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Swap</title>
+    <link rel="stylesheet" href="css/image-swap.css">
+</head>
+<body>
+<h1 class="align-middle">Image Swap!</h1>
+    <div id="img-first">
+        <img class="float-left img-size" src="img/park1.jpg">
+    </div>
+    <div id="img-second">
+        <img class="float-left img-size" src="img/park2.jpg">
+    </div>
+    <div id="img-third">
+        <img class="float-left img-size" src="img/park3.jpg">
+    </div>
+<div class="clear">
+    <button class="custom-btn btn1">Swap</button>
+    <button class="custom-btn btn2">Swap</button>
+    <button class="custom-btn btn3">Swap</button>
+</div>
+<script src="js/jquery.js"></script>
+<script>
+
+    $(document).ready(function () {
+       $('.btn1').click(function () {
+           $('#img-first').children().first().detach().appendTo('#img-second');
+           $('#img-second').children().first().detach().appendTo('#img-first');
+       });
+
+       $('.btn2').click(function () {
+           var rng = Math.floor((Math.random() * 2) + 1);
+           if (rng === 1) {
+               $('#img-second').children().first().detach().appendTo('#img-third');
+               $('#img-third').children().first().detach().appendTo('#img-second');
+           } else {
+               $('#img-second').children().first().detach().appendTo('#img-first');
+               $('#img-first').children().first().detach().appendTo('#img-second');
+           }
+       });
+
+       $('.btn3').click(function () {
+           $('#img-third').children().first().detach().appendTo('#img-first');
+           $('#img-second').children().first().detach().appendTo('#img-third');
+           $('#img-first').children().first().detach().appendTo('#img-second');
+       })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+.float-left {
+    float: left ;
+}
+
+.align-middle {
+    text-align: center;
+}
+
+.custom-btn {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    border: 2px solid #8187e6;
+    width: 64px;
+    height: 22px;
+    margin-left: 190px;
+    margin-top: 20px;
+}
+
+.img-size {
+    height: 300px;
+    width: 300px;
+    border: 3px solid black;
+    margin-left: 80px;
+}
+
+.img-container {
+    width: 100%;
+    margin: auto;
+}
+
+.clear {
+    clear: both;
+}
+
+.btn1 {
+
+}
+
+.btn2 {
+    margin-left: 340px;
+}
+
+.btn3 {
+    margin-left: 315px;
+}
