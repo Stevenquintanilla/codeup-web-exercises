@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quotes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center">So What'll it Be???</h1>
+    <hr class="bg-light w-100">
+    <div class="w-100">
+        <button id="joke" class="float-left w-25">Get Joke</button>
+        <div id="output" class="float-left w-50 text-center">Joke or Quote comes out here</div>
+        <button id="quote" class="float-left w-25">Get Quote</button>
+    </div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+    $('#quote').click(function () {
+        $.ajax("http://quotes.stormconsultancy.co.uk/random.json").done(function(data) {
+        console.log("Success!");
+            document.getElementById('output').innerHTML = '';
+            getQuote(data);
+        }).fail(function () {
+        console.log("Failure");
+    });
+    });
+
+    $('#joke').click(function () {
+        $.ajax("http://api.icndb.com/jokes/random?firstName=John&amp;lastName=Doe").done(function(data) {
+            console.log("Success!");
+            document.getElementById('output').innerHTML = '';
+            getJoke(data);
+        }).fail(function () {
+            console.log("Failure");
+        });
+    });
+
+
+
+    function getQuote(data) {
+        var html = '';
+        html += data.quote;
+        // $.each(data, function (index, element) {
+        // html += element;
+        // });
+
+        $('#output').append(html);
+    }
+
+    function getJoke(data) {
+        var html = '';
+        html += data.value.joke;
+
+        $('#output').append(html);
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

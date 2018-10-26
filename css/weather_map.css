@@ -1,0 +1,17 @@
+body {
+    background: rgb(167, 219, 248)	;
+    width: 100%;
+}
+
+.wBox {
+    background: rgb(242, 242, 242);
+    width: 33%;
+    height: 20%;
+    border: 1px solid black;
+}
+
+#test {
+    background: rgb(167, 219, 248)	;
+    width: 100%;
+
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/weather_map.css">
+</head>
+<body>
+<div class="container">
+
+    <h1>Weather Application</h1>
+    <h2>San Antonio</h2>
+        <div id="today" class="wBox float-left">
+            test
+        </div>
+        <div id="tomorrow" class="wBox float-left">
+            test
+        </div>
+        <div id="twoDays" class="wBox float-left">
+            test
+        </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    $.get("http://api.openweathermap.org/data/2.5/weather", {
+        APPID: "e20f1beafb708ce6f4b1d3284f3e63b4",
+        q:     "San Antonio, US",
+        units: "imperial"
+    }).done(function (data) {
+        console.log(data);
+    }).fail(function () {
+        console.log("Failure");
+    });
+
+    function getTemp(data) {
+        var html = '';
+
+        html += data.main.temp;
+    }
+
+    function getClouds(data) {
+
+    }
+
+    function getHumidity(data) {
+
+    }
+
+    function getWind(data) {
+
+    }
+
+    function getPressure(data) {
+
+    }
+
+
+
+    // $.ajax({
+    //     url: "http://api.openweathermap.org/data/2.5/weather",
+    //     type: "GET",
+    //     data: {
+    //         APPID: "467fce2fbe4d967cacd8c8886374905a",
+    //         q:     "San Antonio, US"
+    //     }
+    // });
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
