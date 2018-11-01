@@ -8,10 +8,15 @@ body {
     width: 33%;
     height: 20%;
     border: 1px solid black;
+    padding: 20px;
+}
+
+.temperature {
+    font-size: 23px;
+    font-weight: bold;
 }
 
 #test {
     background: rgb(167, 219, 248)	;
     width: 100%;
-
 }
