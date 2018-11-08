@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>My Application</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="movies.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+    <body>
+        <div class="container">
+            <h1 class='fa'>Hello There!</h1>
+            <div id="movies"></div>
+
+        <form>
+            <div>
+                <label for="add-movie">Add a movie</label>
+                <input type="text" name="add-movie" id="add-movie">
+            </div>
+            <div>
+                <label for="ratingselect">What would you rate this movie?</label>
+                <select id="ratingselect" name="ratingselect">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div id="add-id"></div>
+        </form>
+        <button id="add-movie-btn" type="submit">Add Movie</button>
+        <form>
+        </div>
+
+        <script src="/main.js"></script>
+    </body>
+</html>
